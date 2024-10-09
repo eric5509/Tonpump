@@ -33,13 +33,9 @@ export default function RightSidebarA() {
           <div className=" mb-4 mt-3 flex overflow-y-auto w-full justify-between">
             <Title title="Updates" paddingLeft="3px" height="50px" />
             <Links
-              identifier="sidebar"
               active={active}
-              radius="5px"
               setActive={setActive}
-              paddingInline="7px"
               data={["All", "Creation", "Transaction"]}
-              fontSize="11px"
             />
           </div>
           <DisplayActionCards />

@@ -60,8 +60,6 @@ export default function Base() {
                 data={["Details", "Threads", "Transactions", "Holders"]}
                 active={active}
                 setActive={setActive}
-                fontSize="13px"
-                noRadius={true}
               />
               <div className="">
                 <motion.div
