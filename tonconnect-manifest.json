@@ -1,5 +1,5 @@
 {
     "url": "http://localhost:3000",
     "name": "Tonpump",
-    "iconUrl": "localhost:3000/public/logo.svg"
+    "iconUrl": "localhost:3000/logo.svg"
 }
