@@ -9,6 +9,7 @@ import BuySell from "../Tokens/BuySell";
 import Input from "../General/Input";
 import Button from "../General/Button";
 import { useState } from "react";
+import Links2 from "../General/Links2";
 
 export default function RightSidebarA() {
   const darkmode = useAppSelector((store) => store.darkmode.value);
@@ -32,7 +33,7 @@ export default function RightSidebarA() {
           <KingOfCoin />
           <div className=" mb-4 mt-3 flex overflow-y-auto w-full justify-between">
             <Title title="Updates" paddingLeft="3px" height="50px" />
-            <Links
+            <Links2
               active={active}
               setActive={setActive}
               data={["All", "Creation", "Transaction"]}

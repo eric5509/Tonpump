@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
+    "@tonconnect/ui-react": "^2.0.9",
     "framer-motion": "^11.9.0",
     "hamburger-react": "^2.5.1",
     "next": "14.2.13",
