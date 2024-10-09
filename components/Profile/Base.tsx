@@ -33,9 +33,7 @@ export default function Base() {
           <div className="p-1 mb-3 xl:p-2.5">
             <Title
               title="Token"
-              height="45px"
-              marginBottom="5px"
-              paddingLeft="10px"
+              parentStyle="h-[45px]"
             />
 
           </div>
@@ -43,9 +41,7 @@ export default function Base() {
           <div className="p-1 mt-3 xl:p-2.5">
             <Title
               title="Details"
-              height="45px"
-              marginBottom="5px"
-              paddingLeft="10px"
+              parentStyle="h-[45px]"
             />
           </div>
           <div className=" rounded-t-2xl rounded-b-2xl mt-[5px]">
