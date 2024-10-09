@@ -33,7 +33,7 @@ export default function Base() {
           <div className="overflow-y-auto h-full  lg:rounded-lg">
             <div className="flex gap-7 justify-between md:flex-row mb-4">
               <div className="pl-2">
-                <Title title="Tokens" paddingLeft="5px" height="50px" />
+                <Title title="Tokens" paddingLeft="5px" height="45px" />
               </div>
               <Links
                 active={active}
