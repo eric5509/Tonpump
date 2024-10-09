@@ -47,7 +47,7 @@ export default function Base() {
             >
               <DisplayPostCards />
             </div>
-            <div className="mt-5 p-2 lg:hidden">
+            <div className="mt-5 p-2 xl:hidden">
               <RightSidebarA />
             </div>
           </div>

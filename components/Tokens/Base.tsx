@@ -92,7 +92,7 @@ export default function Base() {
                 </motion.div>
               </div>
             </div>
-            <div className="lg:hidden mt-5">
+            <div className="xl:hidden mt-5">
               <RightSidebarB />
             </div>
           </div>
