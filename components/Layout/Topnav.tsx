@@ -8,6 +8,7 @@ import BackdropA from "../Backdrop/BackdropA"
 import BackdropB from "../Backdrop/BackdropB"
 import MobileSidebar from "./MobileSidebar"
 import { useState } from "react"
+import { TonConnectButton } from '@tonconnect/ui-react'
 
 export default function Topnav() {
     const darkmode = useAppSelector(store => store.darkmode.value)
@@ -60,7 +61,9 @@ export default function Topnav() {
                         dispatch(openBackdrop(1))
                         setOpen(false)
                     }} className="transition-none">
-                        <p className="px-3 lg:px-5 py-2.5 rounded-md lg:rounded-xl cursor-pointer text-xs lg:text-sm border-2 font-semibold lg:hover:scale-105 duration-300 active:scale-100 border-[#9DFBFA] font-">Create Token</p>
+                        {/* <p className="px-3 lg:px-5 py-2.5 rounded-md lg:rounded-xl cursor-pointer text-xs lg:text-sm border-2 font-semibold lg:hover:scale-105 duration-300 active:scale-100 border-[#9DFBFA] font-">Create Token</p> */}
+                        <TonConnectButton />
+
                     </div>
                 </div>
             </div>

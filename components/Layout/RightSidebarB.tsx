@@ -18,10 +18,10 @@ export default function RightSidebarB() {
       transition={{ duration: 1 }}
       className={`${
         type != "market" && "hidden"
-      } h-full flex-col flex border-2 border-purplee overflow-y-auto w-[350px] lg:rounded-2xl`}
+      } h-full flex-col flex xl:border-2 border-purplee p-2 xl:p-0 xl:overflow-y-auto w-full xl:w-[350px] lg:rounded-2xl`}
     >
       <Title parentPadding="10px" title="Trade" height="50px" />
-      <div className="bg-mainDark p-2 xl:bg-[#272727] flex-1 mt-2 rounded-lg ">
+      <div className="bg-mainDark xl:p-2 xl:bg-[#272727] flex-1 mt-2 rounded-lg ">
         <BuySell active={activeMarket} setActive={setActiveMarket} />
         <div className="flex justify-between items-center mt-4">
           <Links

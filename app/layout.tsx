@@ -25,13 +25,13 @@ export default function RootLayout({
       <body className={`${workSans.className} `}>
         <AppProvider>
           <TonProvider>
-            <div className="h-screen ">
+            <div className="h-screen w-full">
               <div className="h-[70px] xl:h-20">
                 <Topnav />
               </div>
-              <div className="h-[calc(100vh-70px)] grid grid-cols-[auto_1fr] gap-2.5 bg-[] overflow-y-auto over xl:h-[calc(100vh-80px)] p-2 xl:p-2.5">
+              <div className="h-[calc(100vh-70px)] w-full grid xl:grid-cols-[auto_1fr] gap-2.5 bg-[] overflow-y-auto over xl:h-[calc(100vh-80px)] xl:p-2.5">
                 <LeftSidebar />
-                <div className="h-full overflow-y-auto">
+                <div className="h-full w-full overflow-y-auto">
                   {children}
                 </div>
               </div>

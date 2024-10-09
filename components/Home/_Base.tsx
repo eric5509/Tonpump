@@ -26,14 +26,14 @@ export default function Base() {
       initial="initial"
       className="h-full gap-3 "
     >
-      <div className="h-full grid gap-2 grid-cols-1 xl:grid-cols-[1fr_300px] 2xl:grid-cols-[1fr_346px] overflow-y-auto">
+      <div className="h-full p-2 xl:p-0 grid gap-2 grid-cols-1 xl:grid-cols-[1fr_300px] 2xl:grid-cols-[1fr_346px] overflow-y-auto">
         <div
           className={`xl:border-2 rounded-md xl:rounded-xl border-purplee overflow-y-auto min-h-full`}
         >
           <div className="overflow-y-auto h-full  lg:rounded-lg">
             <div className="flex xl:p-2 gap-7 justify-between md:flex-row mb-4">
               <div className="pl-2">
-                <Title title="Tokens" paddingLeft="5px" height="45px" />
+                <Title title="Tokens" parentStyle="px-3 h-[45px]" />
               </div>
               <Links
                 active={active}
@@ -49,7 +49,7 @@ export default function Base() {
             >
               <DisplayPostCards />
             </div>
-            <div className="mt-8 p-2 xl:hidden">
+            <div className="mt-8 xl:hidden">
               <RightSidebarA />
             </div>
           </div>

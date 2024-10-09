@@ -24,16 +24,25 @@ export default function RightSidebarA() {
         transition={{ duration: 1 }}
         className={` ${type != "main" && "hidden"} min-h-full rounded-2xl`}
       >
-        <Title title="King of Coin" height="45px" paddingLeft="5px" />
+        <div className="p-1 mb-3 xl:p-2.5">
+          <Title
+            title="King of Coin"
+            parentStyle="h-[45px]"
+          />
+        </div>
         <div
-          className={`${
-            darkmode ? "bg-[#272727d]" : "bg-whited"
-          } h-fit duration-500 transition-colors rounded-2xl mt-3`}
+          className={`${darkmode ? "bg-[#272727d]" : "bg-whited"
+            } h-fit duration-500 transition-colors rounded-2xl mt-3`}
         >
           <KingOfCoin />
-          <div className=" mb-4 mt-3 flex overflow-y-auto w-full justify-between">
-            <Title title="Updates" paddingLeft="3px" height="50px" />
-            <Links2
+          <div className=" mt-3 flex overflow-y-auto w-full justify-between">
+            <div className="p-1 xl:p-2.5">
+              <Title
+                title="Updates"
+                parentStyle="h-[45px]"
+              />
+            </div>          
+             <Links2
               active={active}
               setActive={setActive}
               data={["All", "Creation", "Transaction"]}

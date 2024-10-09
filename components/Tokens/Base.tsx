@@ -33,9 +33,9 @@ export default function Base() {
       variants={variant}
       animate="animate"
       initial="initial"
-      className="h-full grid grid-cols-[1fr_auto] gap-3"
+      className="h-full grid grid-cols-1 xl:grid-cols-[1fr_auto] gap-3"
     >
-      <div className="bg-blue-500"></div>
+      <div className="bg-blue-500 h-96"></div>
       <RightSidebarB />
     </motion.div>
   );

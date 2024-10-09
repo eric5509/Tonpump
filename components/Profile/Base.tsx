@@ -28,24 +28,27 @@ export default function Base() {
       initial="initial"
       className="grid grid-cols-1 xl:grid-cols-[1fr_300px] 2xl:grid-cols-[1fr_346px] gap-2 h-full rounded-2xl "
     >
-      <div className="xl:border-2 p-1 xl:p-2 overflow-y-auto h-full rounded-2xl border-purplee">
+      <div className="xl:border-2 p-2 overflow-y-auto h-full rounded-2xl border-purplee">
         <div className="rounded-lg overflow-y-auto h-full">
-          <Title
-            title="Token"
-            height="45px"
-            parentPadding="10px"
-            marginBottom="5px"
-            paddingLeft="10px"
-          />
+          <div className="p-1 mb-3 xl:p-2.5">
+            <Title
+              title="Token"
+              height="45px"
+              marginBottom="5px"
+              paddingLeft="10px"
+            />
+
+          </div>
           <FollowCard />
-          <Title
-            title="Details"
-            height="45px"
-            parentPadding="10px"
-            marginTop="5px"
-            paddingLeft="10px"
-          />
-          <div className="p-2.5 rounded-t-2xl rounded-b-2xl mt-[5px]">
+          <div className="p-1 mt-3 xl:p-2.5">
+            <Title
+              title="Details"
+              height="45px"
+              marginBottom="5px"
+              paddingLeft="10px"
+            />
+          </div>
+          <div className=" rounded-t-2xl rounded-b-2xl mt-[5px]">
             <Links
               data={["Token Held", "Token Created", "Followers", "Following"]}
               active={active}
