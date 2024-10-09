@@ -23,13 +23,13 @@ export default function LeftSidebar() {
     ["Earn", "gem1.png", "/earn", <FaRegGem size={17} />],
   ];
   return (
-    <div className="flex flex-col h-full justify-between">
+    <div className="hidden xl:flex flex-col w-[320px] overflow-y-auto border-2 p-3 rounded-xl border-purplee h-full justify-between">
       <div className="flex flex-col gap-2">
         {links.map((el) => (
           <Link href={`${el[2]}`}
             className={`flex cursor-pointer active:scale-[0.96] group shadow shadow-slate-950 duration-300 items-center border-2 gap-3 p-3 text-sm rounded-lg ${pathname === el[2]
-                ? "text-secondary border-prim font-semibold bg-prim"
-                : "text-white border-transparent bg-[#242727] hover:border-prim"
+              ? "text-secondary border-prim font-semibold bg-prim"
+              : "text-white border-transparent bg-[#242727] hover:border-prim"
               }`}
           >
             <p className="transform-none">
@@ -52,7 +52,6 @@ export default function LeftSidebar() {
         ))}
       </div>
       <div>
-
         <div className="grid mb-5 mt-3 place-content-center">
           <img src="cuate.png" className="" alt="" />
         </div>

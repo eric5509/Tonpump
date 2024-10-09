@@ -28,7 +28,7 @@ export default function Base() {
       initial="initial"
       className="grid grid-cols-1 xl:grid-cols-[1fr_300px] 2xl:grid-cols-[1fr_346px] gap-2 h-full rounded-2xl "
     >
-      <div className="border-2 p-2 overflow-y-auto h-full rounded-2xl border-purplee">
+      <div className="xl:border-2 p-1 xl:p-2 overflow-y-auto h-full rounded-2xl border-purplee">
         <div className="rounded-lg overflow-y-auto h-full">
           <Title
             title="Token"
@@ -40,16 +40,16 @@ export default function Base() {
           <FollowCard />
           <Title
             title="Details"
-
             height="45px"
             parentPadding="10px"
             marginTop="5px"
             paddingLeft="10px"
           />
-          <div className="bg-[#272727] p-2.5 rounded-t-2xl rounded-b-2xl mt-[5px]">
+          <div className="p-2.5 rounded-t-2xl rounded-b-2xl mt-[5px]">
             <Links
               data={["Token Held", "Token Created", "Followers", "Following"]}
               active={active}
+              paddingX="px-3"
               page="profile"
               setActive={setActive}
             />

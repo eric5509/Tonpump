@@ -5,7 +5,7 @@ import { BsChat, BsDot, BsHeart, BsMessenger, BsStar } from "react-icons/bs";
 export default function PostCard() {
   const darkmode = useAppSelector(store => store.darkmode.value)
   return (
-    <div className={`flex shadow-md border-[#8996A9] border-2 duration-500 transition-colors p-3 rounded-xl gap-2 ${darkmode ? "bg-[#272727]" : "bg-white"}`}>
+    <div className={`flex shadow border-[#8996A9] shadow-mainDark border-2 duration-500 transition-colors p-3 rounded-xl gap-2 ${darkmode ? "bg-[#272727]" : "bg-white"}`}>
       <img src="/new1.png" className="h-[30px] w-[30px]" alt="" />
       <div className={`flex text-white flex-col gap-1`}>
         <div className="flex justify-between items-center">

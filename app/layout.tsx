@@ -29,16 +29,10 @@ export default function RootLayout({
               <div className="h-[70px] xl:h-20">
                 <Topnav />
               </div>
-              <div className="h-[calc(100vh-70px)] overflow-y-auto over xl:h-[calc(100vh-80px)] p-2">
-                <div className="h-full w-full overflow-y-auto grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-2">
-                  <div className="hidden lg:block h-full p-2.5 rounded-2xl w-[275px] 2xl:w-[300px] border-2 border-purplee overflow-y-auto">
-                    <div className="overflow-y-auto rounded-lg h-full">
-                      <LeftSidebar />
-                    </div>
-                  </div>
-                  <div className="lg:rounded-2xl overflow-y-auto">
-                    {children}
-                  </div>
+              <div className="h-[calc(100vh-70px)] grid grid-cols-[auto_1fr] gap-2.5 bg-[] overflow-y-auto over xl:h-[calc(100vh-80px)] p-2 xl:p-2.5">
+                <LeftSidebar />
+                <div className="h-full overflow-y-auto">
+                  {children}
                 </div>
               </div>
             </div>

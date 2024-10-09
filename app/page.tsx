@@ -1,4 +1,4 @@
-import Base from "@/components/Home/Base";
+import Base from "@/components/Home/_Base";
 
 export default function page() {
   return (

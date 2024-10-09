@@ -18,15 +18,16 @@ export default function RightSidebarB() {
       transition={{ duration: 1 }}
       className={`${
         type != "market" && "hidden"
-      } h-full flex-col flex lg:rounded-2xl`}
+      } h-full flex-col flex border-2 border-purplee overflow-y-auto w-[350px] lg:rounded-2xl`}
     >
       <Title parentPadding="10px" title="Trade" height="50px" />
-      <div className="lg:bg-[#272727] flex-1 mt-2 rounded-lg lg:p-2">
+      <div className="bg-mainDark p-2 xl:bg-[#272727] flex-1 mt-2 rounded-lg ">
         <BuySell active={activeMarket} setActive={setActiveMarket} />
         <div className="flex justify-between items-center mt-4">
           <Links
             active={active}
             setActive={setActive}
+            paddingX="px-3 xl:px-2"
             data={["Limit", "Market"]}
           />
           <div className="flex flex-col items-end">
@@ -84,7 +85,7 @@ export default function RightSidebarB() {
             <p className="pl-2">100</p>
           </div>
         </div>
-        <div className="flex mt-10 justify-center">
+        <div className="flex mt-8 justify-center">
           <button
             className={`px-[70px] font-semibold py-[14px] hover:scale-105 active:scale-100 duration-150 rounded-xl text-white ${
               activeMarket === 0 ? "bg-[#4db34d]" : "bg-[red]"

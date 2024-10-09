@@ -28,21 +28,23 @@ export default function Base() {
     >
       <div className="h-full grid gap-2 grid-cols-1 xl:grid-cols-[1fr_300px] 2xl:grid-cols-[1fr_346px] overflow-y-auto">
         <div
-          className={`lg:border-2 lg:p-2.5 lg:rounded-2xl border-purplee overflow-y-auto min-h-full`}
+          className={`xl:border-2 rounded-md xl:rounded-xl border-purplee overflow-y-auto min-h-full`}
         >
           <div className="overflow-y-auto h-full  lg:rounded-lg">
-            <div className="flex gap-7 justify-between md:flex-row mb-4">
+            <div className="flex xl:p-2 gap-7 justify-between md:flex-row mb-4">
               <div className="pl-2">
                 <Title title="Tokens" paddingLeft="5px" height="45px" />
               </div>
               <Links
                 active={active}
+                paddingX="px-2 xl:px-4"
+                fontSize="text-11 xl:text-sm"
                 setActive={setActive}
                 data={["Trending", "Following", "New Projects"]}
               />
             </div>
             <div
-              className={`rounded-2xl min-h-fit lg:min-h-full p-2 lg:p-3 ${darkmode ? "bg-[#272727] " : "bg-gray-100"
+              className={`rounded-2xl min-h-fit lg:min-h-full xl:p-2.5 ${darkmode ? "xl:bg-[#272727] " : "bg-gray-100"
                 } duration-500 transition-colors`}
             >
               <DisplayPostCards />
