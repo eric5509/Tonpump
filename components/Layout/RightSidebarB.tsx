@@ -20,7 +20,7 @@ export default function RightSidebarB() {
         type != "market" && "hidden"
       } h-full flex-col flex lg:rounded-2xl`}
     >
-      <Title parentPadding="" title="Trade" height="50px" />
+      <Title parentPadding="10px" title="Trade" height="50px" />
       <div className="lg:bg-[#272727] flex-1 mt-2 rounded-lg lg:p-2">
         <BuySell active={activeMarket} setActive={setActiveMarket} />
         <div className="flex justify-between items-center mt-4">
