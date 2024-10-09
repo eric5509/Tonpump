@@ -7,7 +7,7 @@ type Props = {
 
 export function TonProvider({ children }: Props) {
   return (
-    <TonConnectUIProvider manifestUrl="http://localhost:3000/tonconnect-manifest.json">
+    <TonConnectUIProvider manifestUrl="https://tonpump-n822.vercel.app/tonconnect-manifest.json">
       {children}
     </TonConnectUIProvider>
   );
