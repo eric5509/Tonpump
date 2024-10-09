@@ -83,7 +83,7 @@ export default function Base() {
                 <FollowingTable />
               </motion.div>
             </div>
-            <div className="mt-4 xl:hidden">
+            <div className="mt-8 xl:hidden">
               <RightSidebarA />
             </div>
           </div>

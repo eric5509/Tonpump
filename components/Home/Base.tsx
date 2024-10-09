@@ -31,7 +31,7 @@ export default function Base() {
           className={`lg:border-2 lg:p-2.5 lg:rounded-2xl border-purplee overflow-y-auto min-h-full`}
         >
           <div className="overflow-y-auto h-full  lg:rounded-lg">
-            <div className="flex gap-7 md:flex-row mb-4">
+            <div className="flex gap-7 justify-between md:flex-row mb-4">
               <div className="pl-2">
                 <Title title="Tokens" paddingLeft="5px" height="50px" />
               </div>
@@ -47,7 +47,7 @@ export default function Base() {
             >
               <DisplayPostCards />
             </div>
-            <div className="mt-5 p-2 xl:hidden">
+            <div className="mt-8 p-2 xl:hidden">
               <RightSidebarA />
             </div>
           </div>
