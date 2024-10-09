@@ -16,11 +16,10 @@ export default function RightSidebarB() {
     <motion.div
       animate={{ opacity: type === "market" ? 1 : 0 }}
       transition={{ duration: 1 }}
-      className={`${
-        type != "market" && "hidden"
-      } h-full flex-col flex xl:border-2 border-purplee p-2 xl:p-0 xl:overflow-y-auto w-full xl:w-[350px] lg:rounded-2xl`}
+      className={`${type != "market" && "hidden"
+        } h-full flex-col flex xl:border-2 border-purplee p-2 xl:p-0 xl:overflow-y-auto w-full xl:w-[350px] lg:rounded-2xl`}
     >
-      <Title parentPadding="10px" title="Trade" height="50px" />
+      <Title parentStyle="h-[45px]" title="Trade" />
       <div className="bg-mainDark xl:p-2 xl:bg-[#272727] flex-1 mt-2 rounded-lg ">
         <BuySell active={activeMarket} setActive={setActiveMarket} />
         <div className="flex justify-between items-center mt-4">
@@ -87,9 +86,8 @@ export default function RightSidebarB() {
         </div>
         <div className="flex mt-8 justify-center">
           <button
-            className={`px-[70px] font-semibold py-[14px] hover:scale-105 active:scale-100 duration-150 rounded-xl text-white ${
-              activeMarket === 0 ? "bg-[#4db34d]" : "bg-[red]"
-            }`}
+            className={`px-[70px] font-semibold py-[14px] hover:scale-105 active:scale-100 duration-150 rounded-xl text-white ${activeMarket === 0 ? "bg-[#4db34d]" : "bg-[red]"
+              }`}
           >
             {activeMarket === 0 ? "Buy" : "Sell"}
           </button>
