@@ -17,9 +17,9 @@ export default function RightSidebarB() {
       animate={{ opacity: type === "market" ? 1 : 0 }}
       transition={{ duration: 1 }}
       className={`${type != "market" && "hidden"
-        } h-full flex-col flex xl:border-2 border-purplee p-2 xl:p-0 xl:overflow-y-auto w-full xl:w-[350px] lg:rounded-2xl`}
+        } h-full flex-col flex xl:border-2 border-purplee xl:overflow-y-auto w-full xl:w-[350px] lg:rounded-2xl`}
     >
-      <div className="ml-1 mb-4">
+      <div className="ml-2 mt-2 mb-4">
         <Title parentStyle="h-[45px]" title="Trade" />
       </div>
       <div className="bg-mainDark xl:p-2 xl:bg-[#272727] flex-1 mt-2 rounded-lg ">
