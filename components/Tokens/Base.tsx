@@ -13,6 +13,7 @@ import TransactionTable from "./TransactionsTable";
 import HoldersTable from "./HoldersTable";
 import { variant } from "@/lib/framer";
 import RightSidebarB from "../Layout/RightSidebarB";
+import Main from "./Main";
 
 type Props = {
   tableHeader: string[];
@@ -33,10 +34,13 @@ export default function Base() {
       variants={variant}
       animate="animate"
       initial="initial"
-      className="h-full grid grid-cols-1 xl:grid-cols-[1fr_auto] gap-3"
+      className="h-full grid grid-cols-1 overflow-y-auto xl:grid-cols-[1fr_auto] gap-3"
     >
-      <div className="bg-blue-500 h-96"></div>
-      <RightSidebarB />
+
+      <Main />
+      <div className="h-full overflow-y-auto hidden xl:block">
+        <RightSidebarB />
+      </div>
     </motion.div>
   );
 }

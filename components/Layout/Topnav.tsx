@@ -58,11 +58,12 @@ export default function Topnav() {
                         <p className="font-">0.0200</p>
                     </div>
                     <div onClick={() => {
-                        dispatch(openBackdrop(1))
+                        // dispatch(openBackdrop(1))
                         setOpen(false)
                     }} className="transition-none">
-                        {/* <p className="px-3 lg:px-5 py-2.5 rounded-md lg:rounded-xl cursor-pointer text-xs lg:text-sm border-2 font-semibold lg:hover:scale-105 duration-300 active:scale-100 border-[#9DFBFA] font-">Create Token</p> */}
-                        <TonConnectButton />
+                        {/* <button data-tc-connect-button="true" className="px-3 lg:px-5 py-2.5 rounded-md lg:rounded-xl cursor-pointer text-xs lg:text-sm border-2 font-semibold lg:hover:scale-105 duration-300 active:scale-100 border-[#9DFBFA] font-">Create Token</button> */}
+
+                        <TonConnectButton  className='p-4' />
                     </div>
                 </div>
             </div>

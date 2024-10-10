@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Work_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Topnav from "@/components/Layout/Topnav";
 import AppProvider from "@/redux/provider/AppProvider";
 import LeftSidebar from "@/components/Layout/LeftSidebar";
 import { TonProvider } from "@/tonprovider/TonProvider";
 
-const workSans = Work_Sans({ subsets: ["latin"] });
+const font = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
   title:
@@ -22,14 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${workSans.className} `}>
+      <body className={`${font.className} `}>
         <AppProvider>
           <TonProvider>
             <div className="h-screen w-full">
               <div className="h-[70px] xl:h-20">
                 <Topnav />
               </div>
-              <div className="h-[calc(100vh-70px)] w-full grid xl:grid-cols-[auto_1fr] gap-2.5 bg-[] overflow-y-auto over xl:h-[calc(100vh-80px)] xl:p-2.5">
+              <div className="h-[calc(100vh-70px)] w-full grid lg:grid-cols-[auto_1fr] gap-2.5 bg-[] overflow-y-auto over xl:h-[calc(100vh-80px)] p-2.5">
                 <LeftSidebar />
                 <div className="h-full w-full overflow-y-auto">
                   {children}

@@ -7,6 +7,7 @@ type Props = {
   data: string[];
   active: number;
   page?: string;
+  textStyle?: string;
   style?: string;
   setActive: Dispatch<SetStateAction<number>>;
 };
@@ -16,6 +17,7 @@ export default function Links2({
   page,
   setActive,
   style,
+  textStyle,
   active,
 }: Props) {
 
@@ -27,10 +29,10 @@ export default function Links2({
   }, [page, state])
 
   return (
-    <div className={`flex bg-gray-800 overflow-x-auto ${style} h-12`}>
+    <div className={`flex bg-gray-800 overflow-x-auto rounded-t-md ${style} h-12`}>
       {data?.map((el, key) => (
         <div onClick={() => setActive(key)} className={` text-nowrap cursor-pointer active:scale-90 px-2 text-10 lg:text-11 duration-300 h-full grid place-content-center border-b-2 ${key === active ? 'text-prim border-prim font-semibold' : 'border-transparent text-gray-50'}  `}>
-          <p className={``}>{el}</p>
+          <p className={`${textStyle}`}>{el}</p>
         </div>
       ))}
     </div>
