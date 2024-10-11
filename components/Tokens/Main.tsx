@@ -5,7 +5,7 @@ import Title from "../General/Title";
 import Chart from "./Chart";
 import SpaceMan from "./SpaceMan";
 import CommentList from "./CommentList";
-import { useJettonContract } from "@/hooks/useJettonContract";
+import { useJettonContract } from "@/hooks/useJettonContract2";
 
 export default function Main() {
     const [active, setActive] = useState(0);

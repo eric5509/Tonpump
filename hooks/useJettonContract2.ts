@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Address, fromNano, OpenedContract, toNano } from "ton-core";
-import {Mint, SampleJetton} from "../build/SampleJetton/tact_SampleJetton";
-import {JettonDefaultWallet} from "../build/SampleJetton/tact_JettonDefaultWallet";
+import {Mint, SampleJetton} from "../build-file/SampleJetton/tact_SampleJetton";
+import {JettonDefaultWallet} from "../build-file/SampleJetton/tact_JettonDefaultWallet";
 import { useAsyncInitialize } from "./useAsyncInitialize";
 import { useTonClient } from "./useTonClient";
 import { useTonConnect } from "./useTonConnect";
