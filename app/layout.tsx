@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import AppProvider from "@/redux/provider/AppProvider";
-import { TonProvider } from "@/tonprovider/TonProvider";
 import Main from "@/components/Layout/Main";
 import Top from "@/components/Layout/Top";
+import BottomNav from "@/components/Home/BottomNav";
+import { TonProvider } from "@/tonprovider/TonProvider";
 
 const font = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
@@ -24,11 +25,11 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${font.className} `}>
         <AppProvider>
-          <TonProvider>
+          <TonProvider >
             <div className="h-screen flex flex-col bg-mainDark">
               <Top />
-              <Main children={children}/>
-              <div className="lg:hidden h-16 bg-main"></div>
+              <Main children={children} />
+              <BottomNav />
             </div>
           </TonProvider>
         </AppProvider>

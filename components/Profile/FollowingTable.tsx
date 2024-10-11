@@ -19,14 +19,14 @@ export default function FollowingTable() {
                         {[key+1, ...ell].map((elem, keyy) => (
                             <>
                                 {keyy === 1 ?
-                                    <div className="flex items-center relative gap-2">
+                                    <div key={keyy} className="flex items-center relative gap-2">
                                         <img src="container.png" alt="" />
                                         <div className="h-full flex items-center font-semibold text-white">
                                             {elem}
                                         </div>
                                     </div>
                                     :
-                                    <div className={`h-full flex items-center text-white ${keyy === 0 && 'pl-6'}`}>
+                                    <div key={keyy} className={`h-full flex items-center text-white ${keyy === 0 && 'pl-6'}`}>
                                         {elem}
                                     </div>
 

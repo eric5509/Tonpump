@@ -48,8 +48,9 @@ export default function MobileSidebar({ navOpened, setNavOpened }: Props) {
           <button onClick={() => setNavOpened(false)} className="bg-secondary text-13 rounded-md text-white font-semibold px-4 h-full ">Search </button>
         </div>
         <div className="flex flex-col gap-2">
-          {links.map((el) => (
+          {links.map((el, key) => (
             <div onClick={() => navigate(`${el[2]}`)}
+            key={key}
               className={`flex cursor-pointer active:scale-[0.96] group duration-300 items-center rounded gap-3 p-3 text-13  ${pathname === el[2]
                 ? "text-secondary border-prim font-semibold bg-prim"
                 : "text-white"

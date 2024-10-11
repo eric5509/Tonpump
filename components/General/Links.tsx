@@ -36,7 +36,7 @@ export default function Links({
   return (
     <div style={{height: `${height}`}} className={`flex bg-gray-800 rounded-md rounded-b-none overflow-x-auto ${style} h-12`}>
       {data?.map((el, key) => (
-        <div onClick={() => setActive(key)} className={` text-nowrap cursor-pointer active:scale-90 text-13 lg:text-xs duration-300 h-full grid place-content-center ${paddingX} border-b-2 ${key === active ? 'text-prim border-prim font-semibold' : 'border-transparent text-gray-50'}  `}>
+        <div onClick={() => setActive(key)} key={key} className={` text-nowrap cursor-pointer active:scale-90 text-13 lg:text-xs duration-300 h-full grid place-content-center ${paddingX} border-b-2 ${key === active ? 'text-prim border-prim font-semibold' : 'border-transparent text-gray-50'}  `}>
           <p className={`${textStyle}`}>{el}</p>
         </div>
       ))}

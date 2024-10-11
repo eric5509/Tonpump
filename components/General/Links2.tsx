@@ -31,7 +31,7 @@ export default function Links2({
   return (
     <div className={`flex bg-gray-800 overflow-x-auto rounded-t-md ${style} h-12`}>
       {data?.map((el, key) => (
-        <div onClick={() => setActive(key)} className={` text-nowrap cursor-pointer active:scale-90 px-2 text-10 lg:text-11 duration-300 h-full grid place-content-center border-b-2 ${key === active ? 'text-prim border-prim font-semibold' : 'border-transparent text-gray-50'}  `}>
+        <div onClick={() => setActive(key)} key={key} className={` text-nowrap cursor-pointer active:scale-90 px-2 text-10 lg:text-11 duration-300 h-full grid place-content-center border-b-2 ${key === active ? 'text-prim border-prim font-semibold' : 'border-transparent text-gray-50'}  `}>
           <p className={`${textStyle}`}>{el}</p>
         </div>
       ))}

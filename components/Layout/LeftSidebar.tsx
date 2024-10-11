@@ -7,8 +7,6 @@ import { FaRegGem } from "react-icons/fa";
 import { useAppSelector } from "@/redux/store/hook";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TonConnectButton } from "@tonconnect/ui-react";
-import TonButton from "./TonButton";
 
 export default function LeftSidebar() {
   const darkmode = useAppSelector((store) => store.darkmode.value);
@@ -27,8 +25,8 @@ export default function LeftSidebar() {
   return (
     <div className="h-full overflow-y-auto p-3 hidden lg:flex flex-col justify-between">
       <div className="flex flex-col gap-2">
-        {links.map((el) => (
-          <Link href={`${el[2]}`}
+        {links.map((el, key) => (
+          <Link href={`${el[2]}`} key={key}
             className={`flex cursor-pointer active:scale-[0.96] group duration-300 items-center border-2 gap-3 pl-5 py-[14px] text-sm rounded-full ${pathname === el[2]
               ? "text-secondary border-prim font-semibold bg-prim"
               : "text-white border-transparent  hover:border-prim"
@@ -52,6 +50,7 @@ export default function LeftSidebar() {
             </p>
           </Link>
         ))}
+        
       </div>
       <div>
         <div className="grid mb-5 mt-3 place-content-center">

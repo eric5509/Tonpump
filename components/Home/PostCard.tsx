@@ -18,7 +18,7 @@ export default function PostCard() {
             </div>
           </div>
           <div className="text-white pb-1 flex flex-col gap-2 text-xs">
-            <p className="flex gap-1 items-center">$Space created by <div className="h-1 w-1 rounded-full mx-2 bg-prim"></div> <b>UGnxf</b></p>
+            <div className="flex gap-1 items-center">$Space created by <div className="h-1 w-1 rounded-full mx-2 bg-prim"></div> <b>UGnxf</b></div>
             <p>Market Cap - 11.5k</p>
             <p><strong>Space Man</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo incidunt distinctio laborum!</p>
           </div>

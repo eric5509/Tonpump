@@ -1,5 +1,7 @@
 import Base from "@/components/Tokens/Base";
 
 export default function page() {
-  return <Base />;
+  return <div className="">
+    <Base />;
+  </div>
 }

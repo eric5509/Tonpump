@@ -4,15 +4,21 @@ import Links from "../General/Links";
 import Title from "../General/Title";
 import Chart from "./Chart";
 import SpaceMan from "./SpaceMan";
-import RightSidebarB from "../Layout/RightSidebarB";
 import CommentList from "./CommentList";
+import { useJettonContract } from "@/hooks/useJettonContract";
 
 export default function Main() {
     const [active, setActive] = useState(0);
-
+    const {balance, jettonWalletAddress, mint} = useJettonContract()
+    const jetFunction = () => {
+        console.log(balance, jettonWalletAddress)
+    }
+    
+    
     return (
-        <div className="p-3 overflow-y-auto rounded-xl h-full w-full">
+        <div className="xl:p-3 overflow-y-auto rounded-xl h-full w-full">
             <div className="xl:p-0">
+                <button className="px-6 py-3 bg-prim text-base ring-mainDark" onClick={mint}>Jetton </button>
                 <div className="mb-4 ml-2"><Title title="Token" /></div>
                 <SpaceMan />
                 <div className="mt-5 mb-5 ml-1"><Title title="Charts" /></div>
@@ -24,9 +30,7 @@ export default function Main() {
                 </div>
                 <CommentList />
             </div>
-            <div className="mt-5 xl:hidden">
-                <RightSidebarB />
-            </div>
+
         </div>
     )
 }

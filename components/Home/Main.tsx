@@ -8,8 +8,8 @@ import RightSidebarA from "../Layout/RightSidebarA";
 export default function Main() {
   const [active, setActive] = useState(0)
   return (
-    <div className="overflow-y-auto p-4 rounded-xl h-full w-full">
-      <div className="p-2 xl:p-0">
+    <div className="overflow-y-auto p-2 lg:p-3 xl:p-4 rounded-xl h-full w-full">
+      <div className="xl:p-0">
         <div className="flex justify-between">
           <div className="mt-1 ml-1">
             <Title title="Token" height="50px" parentStyle=""/>
