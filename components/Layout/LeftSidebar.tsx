@@ -26,7 +26,6 @@ export default function LeftSidebar() {
   ];
   return (
     <div className="h-full overflow-y-auto p-3 hidden lg:flex flex-col justify-between">
-      <TonButton />
       <div className="flex flex-col gap-2">
         {links.map((el) => (
           <Link href={`${el[2]}`}
