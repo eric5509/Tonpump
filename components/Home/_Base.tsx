@@ -31,12 +31,9 @@ export default function Base() {
       variants={variant}
       animate="animate"
       initial="initial"
-      className=" h-full overflow-y-auto grid xl:grid-cols-[1fr_auto] gap-2 "
+      className=" h-full overflow-y-auto "
     >
       <Main />
-      <div className="hidden xl:block">
-        <RightSidebarA />
-      </div>
     </motion.div>
   );
 }

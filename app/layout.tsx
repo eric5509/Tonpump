@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import Topnav from "@/components/Layout/Topnav";
 import AppProvider from "@/redux/provider/AppProvider";
-import LeftSidebar from "@/components/Layout/LeftSidebar";
 import { TonProvider } from "@/tonprovider/TonProvider";
+import Main from "@/components/Layout/Main";
+import Top from "@/components/Layout/Top";
 
 const font = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
@@ -25,16 +25,10 @@ export default function RootLayout({
       <body className={`${font.className} `}>
         <AppProvider>
           <TonProvider>
-            <div className="h-screen w-full">
-              <div className="h-[70px] xl:h-20">
-                <Topnav />
-              </div>
-              <div className="h-[calc(100vh-70px)] w-full grid lg:grid-cols-[auto_1fr] gap-2.5 bg-[] overflow-y-auto over xl:h-[calc(100vh-80px)] p-2.5">
-                <LeftSidebar />
-                <div className="h-full w-full overflow-y-auto">
-                  {children}
-                </div>
-              </div>
+            <div className="h-screen flex flex-col bg-mainDark">
+              <Top />
+              <Main children={children}/>
+              <div className="lg:hidden h-16 bg-main"></div>
             </div>
           </TonProvider>
         </AppProvider>

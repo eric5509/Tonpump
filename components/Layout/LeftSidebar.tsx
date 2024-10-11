@@ -7,6 +7,8 @@ import { FaRegGem } from "react-icons/fa";
 import { useAppSelector } from "@/redux/store/hook";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { TonConnectButton } from "@tonconnect/ui-react";
+import TonButton from "./TonButton";
 
 export default function LeftSidebar() {
   const darkmode = useAppSelector((store) => store.darkmode.value);
@@ -23,13 +25,14 @@ export default function LeftSidebar() {
     ["Earn", "gem1.png", "/earn", <FaRegGem size={17} />],
   ];
   return (
-    <div className="hidden lg:flex flex-col w-[320px] overflow-y-auto border-2 p-3 rounded-xl border-purplee h-full justify-between">
+    <div className="h-full overflow-y-auto p-3 hidden lg:flex flex-col justify-between">
+      <TonButton />
       <div className="flex flex-col gap-2">
         {links.map((el) => (
           <Link href={`${el[2]}`}
-            className={`flex cursor-pointer active:scale-[0.96] group shadow shadow-slate-950 duration-300 items-center border-2 gap-3 p-3 text-sm rounded-lg ${pathname === el[2]
+            className={`flex cursor-pointer active:scale-[0.96] group duration-300 items-center border-2 gap-3 pl-5 py-[14px] text-sm rounded-full ${pathname === el[2]
               ? "text-secondary border-prim font-semibold bg-prim"
-              : "text-white border-transparent bg-[#242727] hover:border-prim"
+              : "text-white border-transparent  hover:border-prim"
               }`}
           >
             <p className="transform-none">

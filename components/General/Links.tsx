@@ -8,8 +8,9 @@ type Props = {
   active: number;
   page?: string;
   style?: string;
-  fontSize?: string;
   paddingX?: string
+  fontSize?: string;
+  height?: string;
   textStyle?: string
   setActive: Dispatch<SetStateAction<number>>;
 };
@@ -21,7 +22,8 @@ export default function Links({
   setActive,
   style,
   active,
-  textStyle
+  textStyle,
+  height
 }: Props) {
 
   const [state, setState] = useState(page);
@@ -32,7 +34,7 @@ export default function Links({
   }, [page, state])
 
   return (
-    <div className={`flex bg-gray-800 rounded-md rounded-b-none overflow-x-auto ${style} h-12`}>
+    <div style={{height: `${height}`}} className={`flex bg-gray-800 rounded-md rounded-b-none overflow-x-auto ${style} h-12`}>
       {data?.map((el, key) => (
         <div onClick={() => setActive(key)} className={` text-nowrap cursor-pointer active:scale-90 text-13 lg:text-xs duration-300 h-full grid place-content-center ${paddingX} border-b-2 ${key === active ? 'text-prim border-prim font-semibold' : 'border-transparent text-gray-50'}  `}>
           <p className={`${textStyle}`}>{el}</p>

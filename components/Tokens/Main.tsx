@@ -5,12 +5,13 @@ import Title from "../General/Title";
 import Chart from "./Chart";
 import SpaceMan from "./SpaceMan";
 import RightSidebarB from "../Layout/RightSidebarB";
+import CommentList from "./CommentList";
 
 export default function Main() {
     const [active, setActive] = useState(0);
 
     return (
-        <div className="border-purplee overflow-y-auto xl:p-2 rounded-xl lg:border-2 h-full w-full">
+        <div className="p-3 overflow-y-auto rounded-xl h-full w-full">
             <div className="xl:p-0">
                 <div className="mb-4 ml-2"><Title title="Token" /></div>
                 <SpaceMan />
@@ -21,6 +22,7 @@ export default function Main() {
                         <Links data={['Details', 'Threads', 'Transactions', 'Holders']} textStyle="px-2 text-sm xl:px-4 " setActive={setActive} active={active} />
                     </div>
                 </div>
+                <CommentList />
             </div>
             <div className="mt-5 xl:hidden">
                 <RightSidebarB />

@@ -14,11 +14,9 @@ export default function RightSidebarA() {
   const [activeMarket, setActiveMarket] = useState(0);
 
   return (
-    <div className="h-full xl:rounded-xl w-full xl:w-[350px] py-5 bg-[#272727] xl:overflow-y-auto xl:border-2 p-2 border-purplee">
+    <div className="hidden xl:block h-full xl:rounded-xl w-full xl:w-[350px] xl:overflow-y-auto p-2 px-3">
       <motion.div
-        animate={{ opacity: type === "main" ? 1 : 0 }}
-        transition={{ duration: 1 }}
-        className={` ${type != "main" && "hidden"} min-h-full xl:rounded-xl`}
+        className={`  min-h-full xl:rounded-xl`}
       >
         <div className="mb-3">
           <Title

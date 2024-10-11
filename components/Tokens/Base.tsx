@@ -8,7 +8,7 @@ import Title from "../General/Title";
 import Chart from "./Chart";
 import Links from "../General/Links";
 import Details from "./Details";
-import DisplayCommentCards from "./DisplayCommentCards";
+import DisplayCommentCards from "./CommentList";
 import TransactionTable from "./TransactionsTable";
 import HoldersTable from "./HoldersTable";
 import { variant } from "@/lib/framer";
@@ -34,13 +34,9 @@ export default function Base() {
       variants={variant}
       animate="animate"
       initial="initial"
-      className="h-full grid grid-cols-1 overflow-y-auto xl:grid-cols-[1fr_auto] gap-3"
+      className="h-full grid overflow-y-auto gap-3"
     >
-
       <Main />
-      <div className="h-full overflow-y-auto hidden xl:block">
-        <RightSidebarB />
-      </div>
     </motion.div>
   );
 }

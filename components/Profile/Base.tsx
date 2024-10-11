@@ -22,9 +22,6 @@ export default function Base() {
       className=" h-full overflow-y-auto grid gap-5 xl:gap-2 xl:grid-cols-[1fr_auto]"
     >
       <Main />
-      <div className="hidden overflow-y-auto xl:block">
-        <RightSidebarA />
-      </div>
     </motion.div>
   );
 }

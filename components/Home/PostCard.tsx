@@ -1,44 +1,45 @@
 'use client'
 import { useAppSelector } from "@/redux/store/hook";
 import Image from "next/image";
-import { BsChat, BsDot, BsHeart, BsMessenger, BsStar } from "react-icons/bs";
+import { BiComment } from "react-icons/bi";
+import { FaRegComment } from "react-icons/fa6";
+import { BsChat, BsDot, BsHeart, BsHeartFill, BsMessenger, BsStar } from "react-icons/bs";
 export default function PostCard() {
   const darkmode = useAppSelector(store => store.darkmode.value)
   return (
-    <div className={`flex shadow border-[#8996A9] shadow-mainDark border-2 duration-500 transition-colors p-3 rounded-xl gap-2 ${darkmode ? "bg-[#272727]" : "bg-white"}`}>
-      <img src="/new1.png" className="h-[30px] w-[30px]" alt="" />
-      <div className={`flex text-white flex-col gap-1`}>
-        <div className="flex justify-between items-center">
-          <p className="flex gap-1 text-10 items-center">
-            <span className={`${darkmode ? "text-white" : "text-secondary"} duration-500 transition-colors`}>$Space</span>
-            <span className={`text-xs text-nowrap ${darkmode ? "text-[#ECEDEE] " : "text-secondary"} ml-1 duration-500 transition-colors`}>created by</span>
-            <BsDot />
-            <span className={`${darkmode ? "text-white" : "text-secondary"} font-semibold duration-500 transition-colors`}>UGnxf</span>
-          </p>
-          <img src="/star.png" className="h-4 cursor-pointer" alt="" />
-        </div>
-        <p className={`text-xs ${darkmode ? "text-[#ECEDEE] " : "text-secondary"} duration-500 transition-colors`}>Market Cap - 11.5k</p>
-        <p className="text-xs mb-2">
-          <b className={`${darkmode ? "text-white" : "text-secondary"} duration-500 transition-colors`}> Space Man (#Space)</b> is a cryptocurrency project
-          based on inspirations from a man who visited.....
-        </p>
-        <img
-          src="alien.png"
-          className="object-cover rounded-xl "
-          alt=""
-        />
-        <div className="mt-2 text-xs flex gap-7 items-center">
-          <div className="flex cursor-pointer items-center gap-2">
-            <img src="comment.png" alt="" />
-            <p className={`${darkmode ? "text-white" : "text-secondary"}`}>61</p>
+    <div className="bg-[#3C4141] p-4 border-2 border-prim rounded-xl">
+      <div className="">
+        <div className="grid grid-cols-[auto_1fr] relative mb-2 gap-3">
+          <BsStar className="absolute  top-0 text-[17px] right-2 text-prim" />
+          <div className="h-full flex flex-col gap-1">
+            <img src="/new1.png" className="h-[40px] w-[40px]" alt="" />
+            <div className={`flex-1 flex justify-center`}>
+              <div className="h-full border-r-2 border-prim border-dashed"></div>
+            </div>
           </div>
-          <div className="flex text-[#F4245E] cursor-pointer items-center gap-2">
-            <img src="like.png" alt="" />
-            <p>6.2k</p>
+          <div className="text-white pb-1 flex flex-col gap-2 text-xs">
+            <p className="flex gap-1 items-center">$Space created by <div className="h-1 w-1 rounded-full mx-2 bg-prim"></div> <b>UGnxf</b></p>
+            <p>Market Cap - 11.5k</p>
+            <p><strong>Space Man</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo incidunt distinctio laborum!</p>
           </div>
         </div>
-        <p className={`text-xs mt-2 duration-500 transition-colors ${darkmode ? "text-[#9DFBFA]" : "text-secondary"} `}>Show more</p>
+        <div className="text-white">
+          <div className="h-64 border-2 overflow-hidden border-transparent relative rounded-md">
+            <img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/03/monkey-g412399084_1280.jpg" className="w-full aspect-[4/3] object-cover absolute top-0 left-0" alt="" />
+          </div>
+          <div className="flex pt-5 items-center gap-5">
+            <div className="flex text-rose-600 items-center gap-2">
+              <BsHeartFill />
+              <p>61</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaRegComment />
+              <p>61</p>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   );
 }

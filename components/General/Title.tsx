@@ -6,12 +6,13 @@ type Props = {
     leaveWhite?: boolean
     parentStyle?: string 
     textStyle?: string 
+    height?: string 
 }
 
-export default function Title({ title, textStyle, parentStyle, leaveWhite }: Props) {
+export default function Title({ title,height, textStyle, parentStyle, leaveWhite }: Props) {
     const darkmode = useAppSelector(store => store.darkmode.value)
     return (
-        <div className={`${parentStyle} pl-4 h-[45px] overflow-hidden rounded-[3px] flex items-center relative w-full `}>
+        <div style={{height: `${height}`}} className={`${parentStyle} pl-4 h-[45px] overflow-hidden rounded-[3px] flex items-center relative w-full `}>
             <div className="h-6 w-6 -top-[16px] rotate-45 -left-[15px] absolute bg-prim"></div>
             <div className="h-6 w-6 -bottom-[16px] rotate-45 -left-[15px] absolute bg-white"></div>
             <p className={`place-content-center text-base lg:text-[17px] font-semibold ${darkmode ? 'text-white' : `${leaveWhite ? "text-white" : "text-black"}`} ${textStyle} duration-500 transition-colors`}>{title}</p>
